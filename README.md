@@ -139,7 +139,10 @@ esp_mn_commands_update();
 然后在检测任务中添加对应的处理逻辑：
 
 ```c
-if (command_id == 4) {
+if (command_id == 2) {
+    printf("36号\n");
+}
+if (command_id == 3) {
     printf("执行命令: 开灯\n");
     // 添加开灯的具体实现
     gpio_set_level(LED_PIN, 1);
@@ -206,7 +209,11 @@ if (state == ESP_MN_STATE_DETECTED) {
    - 确认模型文件完整性
 
 2. **无法识别语音**
-   - 检查麦克风连接
+   - 检查麦克风连接--INMP441_SLK_IO1 G15
+                    INMP441_WS_IO1 G16
+                    INMP441_SD_IO1 G17
+                    INMP441_L/R  悬空不接
+                    vcc 3.3v    GND  GND
    - 确认I2S配置正确
    - 在安静环境下测试
 
