@@ -1,5 +1,7 @@
 # ESP-SR 拼音唤醒词识别项目
 
+###注意：观看我视频来的小伙伴请去下拉版本2.0.0的代码。
+
 ## 📖 项目简介
 
 这是一个基于ESP32的智能语音识别项目，使用Espressif的ESP-SR语音识别框架，实现了纯拼音唤醒词识别功能。项目摒弃了传统的WakeNet预设唤醒词模式，直接使用MultiNet模型进行自定义拼音唤醒词检测。
@@ -13,7 +15,7 @@
 - **RAM要求**: 建议512KB以上SRAM
 
 ### 软件框架
-- **开发框架**: ESP-IDF v4.4+
+- **开发框架**: ESP-IDF v4.4+/最好是v5.4.1
 - **语音识别**: ESP-SR (Espressif Speech Recognition)
 - **实时操作系统**: FreeRTOS
 - **音频处理**: ESP-AFE (Audio Front-End)
