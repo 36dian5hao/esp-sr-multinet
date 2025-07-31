@@ -1,5 +1,4 @@
-menu "Example Configuration"
-
+menu "Project Configuration"
     orsource "$IDF_PATH/examples/common_components/env_caps/$IDF_TARGET/Kconfig.env_caps"
 
     choice BLINK_LED
@@ -45,5 +44,20 @@ menu "Example Configuration"
         default 1000
         help
             Define the blinking period in milliseconds.
-
+    
+    config PROJECT_CUSTOM_OPTION
+        bool "Enable custom option"
+        default n
+        help
+            This is an example of a custom configuration option.
+            
+    if PROJECT_CUSTOM_OPTION
+        config PROJECT_CUSTOM_OPTION_VALUE
+            int "Custom option value"
+            default 42
+            range 0 100
+            help
+                Value for the custom option (0-100).
+    endif
+    
 endmenu

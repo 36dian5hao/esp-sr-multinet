@@ -9,10 +9,10 @@
 //事件处理函数
 void Init_i2s(){
     i2s_config_t i2s_config = {
-        .mode = (i2s_mode_t)(I2S_MODE_MASTER | I2S_MODE_RX),
-        .sample_rate = 16000,
-        .bits_per_sample = I2S_BITS_PER_SAMPLE_16BIT,
-        .channel_format = I2S_CHANNEL_FMT_ONLY_LEFT,
+        .mode = (i2s_mode_t)(I2S_MODE_MASTER | I2S_MODE_RX),//I2S_MODE_MASTER | I2S_MODE_TX
+        .sample_rate = 16000,//16000
+        .bits_per_sample = I2S_BITS_PER_SAMPLE_16BIT,//I2S_BITS_PER_SAMPLE_32BIT
+        .channel_format = I2S_CHANNEL_FMT_ONLY_LEFT,//I2S_CHANNEL_FMT_ONLY_RIGHT
         .communication_format = (i2s_comm_format_t)(I2S_COMM_FORMAT_STAND_I2S),
         .intr_alloc_flags = 0,
         .dma_buf_count = 8,
@@ -21,10 +21,10 @@ void Init_i2s(){
     };
     i2s_driver_install(I2S_NUM_0, &i2s_config, 0, NULL);
     i2s_pin_config_t pin_config = {
-        .bck_io_num = INMP441_SLK_IO1,            // SCK引脚号
-        .ws_io_num = INMP441_WS_IO1,             // LRCK引脚号
-        .data_out_num = -1, // DATA引脚号
-        .data_in_num = INMP441_SD_IO1,           // DATA_IN引脚号
+        .bck_io_num = INMP441_SLK_IO1,            
+        .ws_io_num = INMP441_WS_IO1,             
+        .data_out_num = -1, 
+        .data_in_num = INMP441_SD_IO1,           
     };
     i2s_set_pin(I2S_NUM_0, &pin_config);
     i2s_start(I2S_NUM_0);

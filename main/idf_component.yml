@@ -1,3 +1,12 @@
+## IDF Component Manager Manifest File
 dependencies:
+  # Required IDF version
   espressif/led_strip: "^2.4.1"
   espressif/esp-sr: "~2.1.1"
+  idf:
+    version: ">=5.0.0"
+  # Put component dependencies here
+  # For example:
+  # some_component:
+  #   version: "~1.0.0"
+  #   git: https://github.com/example/some_component.git

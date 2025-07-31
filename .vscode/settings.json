@@ -1,0 +1,14 @@
+{
+    "idf.customExtraVars": {
+        "IDF_TARGET": "esp32s3"
+    },
+    "idf.portWin": "COM7",
+    "idf.flashType": "UART",
+    "files.associations": {
+        "web_scr_set.h": "c",
+        "esp_log.h": "c"
+    },
+    "idf.espIdfPathWin": "C:\\Users\\22723\\esp\\v5.4.1\\esp-idf",
+    "idf.toolsPathWin": "d:\\Espressif\\tools",
+    "idf.pythonInstallPath": "d:\\Espressif\\tools\\tools\\idf-python\\3.11.2\\python.exe"
+}
